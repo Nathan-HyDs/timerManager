@@ -1,6 +1,10 @@
 <template>
-  <div class="hello">
-  test {{count}}
+  <div class="clock">
+    <div class="clock_container">
+      <div class="clock_button">
+
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,7 +21,17 @@ export default {
     }
   },
   computed: {
-    ...Vuex.mapGetters(['count'])
+    ...Vuex.mapGetters([
+      'count'
+    ])
+  },
+  methods: {
+    ...Vuex.mapActions([
+      'increment'
+    ]),
+    startTimer: ()=>{
+      console.log('j')
+    }
   }
 }
 </script>

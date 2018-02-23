@@ -13,7 +13,11 @@ const store = new Vuex.Store({
   },
   getters: {
     count: state => state.count
+  },
+  actions: {
+    increment: (store) => {
+      store.commit('INCREMENT')
+    }
   }
 })
-global.store = store
-export default store;
+export default store
